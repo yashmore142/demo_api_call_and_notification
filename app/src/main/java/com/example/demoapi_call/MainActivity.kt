@@ -53,26 +53,8 @@ class MainActivity : AppCompatActivity() {
             adapter = Adapter(this)
             binding.rvData.adapter = adapter
             adapter.updateList(it)
-            val input = "Yash135more134"
 
-            val letters = StringBuilder()
-            val numbers = StringBuilder()
-
-            // Separate letters and numbers
-            for (ch in input) {
-                if (ch in 'A'..'Z' || ch in 'a'..'z') {
-                    letters.append(ch.lowercaseChar())
-                } else if (ch in '0'..'9') {
-                    numbers.append(ch)
-                }
-            }
-            Log.i("separated_item", "observer: ${letters.toString()} ${numbers.toString()}")
             notify1()
-            Toast.makeText(
-                this,
-                "observer: ${letters.toString()} ${numbers.toString()}",
-                Toast.LENGTH_SHORT
-            ).show()
         }
 
     }
